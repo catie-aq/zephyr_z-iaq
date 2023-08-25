@@ -1,0 +1,8 @@
+# Z IAQ board configuration
+
+# Copyright (c) 2023 CATIE
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_Z_IAQ
+	bool "Z IAQ Development Board"
+	depends on SOC_NRF52832_QFAA
