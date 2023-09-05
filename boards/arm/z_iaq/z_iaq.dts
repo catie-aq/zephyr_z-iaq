@@ -61,6 +61,22 @@
 		};
 	};
 
+	pwmleds {
+		compatible = "pwm-leds";
+		pwm_led1_r: pwm_led_0 {
+			pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "User PWM LED 1 Red";
+		};
+		pwm_led1_g: pwm_led_1 {
+			pwms = <&pwm0 1 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "User PWM LED 1 Green";
+		};
+		pwm_led1_b: pwm_led_2 {
+			pwms = <&pwm0 2 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "User PWM LED 1 Blue";
+		};
+	};
+
 	gpio_keys {
 		compatible = "gpio-keys";
 		user_button: button {
@@ -80,6 +96,12 @@
 		led3-r = &led3_r;
 		led3-g = &led3_g;
 		led3-b = &led3_b;
+		pwm-led0 = &pwm_led1_r;
+		pwm-led1 = &pwm_led1_g;
+		pwm-led2 = &pwm_led1_b;
+		pwm-led1-r = &pwm_led1_r;
+		pwm-led1-g = &pwm_led1_g;
+		pwm-led1-b = &pwm_led1_b;
 		sw0 = &user_button;
 	};
 };
@@ -102,5 +124,12 @@
 	status = "okay";
 	pinctrl-0 = <&i2c0_default>;
 	pinctrl-1 = <&i2c0_sleep>;
+	pinctrl-names = "default", "sleep";
+};
+
+&pwm0 {
+	status = "okay";
+	pinctrl-0 = <&pwm0_default>;
+	pinctrl-1 = <&pwm0_sleep>;
 	pinctrl-names = "default", "sleep";
 };
