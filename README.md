@@ -7,19 +7,19 @@ Z_IAQ custom target for Zephyr OS.
     - With the [6tron manifest](https://github.com/catie-aq/zephyr_6tron-manifest):
     ```bash
         - name: 6tron-manifest
-        remote: catie-6tron
-        repo-path: zephyr_6tron-manifest
-        revision: main
-        path: 6tron/6tron-manifest
+          remote: catie-6tron
+          repo-path: zephyr_6tron-manifest
+          revision: main
+          path: 6tron/6tron-manifest
             name-blocklist:
-            - z-iaq
+              - z-iaq
     ```
     - Without the [6tron manifest](https://github.com/catie-aq/zephyr_6tron-manifest):
     ```bash
         - name: 6tron-manifest
-        remote: catie-6tron
-        repo-path: zephyr_6tron-manifest
-        revision: main
+          remote: catie-6tron
+          repo-path: zephyr_6tron-manifest
+          revision: main
     ```
 
 2. Compile your application for the Z_IAQ board
