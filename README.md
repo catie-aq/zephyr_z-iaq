@@ -24,7 +24,7 @@ Z_IAQ custom target for Zephyr OS.
 
 2. Compile your application for the Z_IAQ board
 ```bash
-west build -b 6tron_z_iaq <zephyr>/samples/hello_world
+west build -b z_iaq <zephyr>/samples/hello_world
 ```
 
 3. Flash your application
