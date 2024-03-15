@@ -22,4 +22,6 @@ The Zephyr Z_IAQ board configuration supports the following hardware features:
 
 ## Usage
 
-Compile and flash application using `z_iaq` board name.
+1. Add `Z_IAQ` board to your workspace using the [6tron-manifest](https://github.com/catie-aq/zephyr_6tron-manifest.git)
+2. Compile and flash application using west tool
+   - Board name: `z_iaq`
