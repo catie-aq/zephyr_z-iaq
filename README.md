@@ -1,33 +1,25 @@
 # Z_IAQ
 
-Z_IAQ custom target for Zephyr OS.
+[Z_IAQ](https://6tron.io/z_object/z_iaq) custom target for Zephyr OS.
+
+## Supported Features
+
+The Zephyr Z_IAQ board configuration supports the following hardware features:
+
+| Interface | Controller | Driver/Component                                                                                                          |
+| :-------- | :--------- | :------------------------------------------------------------------------------------------------------------------------ |
+| CLOCK     | on-chip    | clock_control                                                                                                             |
+| FLASH     | on-chip    | flash                                                                                                                     |
+| GPIO      | on-chip    | gpio                                                                                                                      |
+| I2C(M)    | on-chip    | i2c                                                                                                                       |
+| MPU       | on-chip    | arch/arm                                                                                                                  |
+| NVIC      | on-chip    | arch/arm                                                                                                                  |
+| PWM       | on-chip    | pwm                                                                                                                       |
+| RADIO     | on-chip    | Bluetooth                                                                                                                 |
+| UART      | on-chip    | serial                                                                                                                    |
+| WDT       | on-chip    | watchdog                                                                                                                  |
+| SENSOR    | BME688     | [bme688](https://www.bosch-sensortec.com/products/environmental-sensors/gas-sensors/bme688/) (Not supported on Zephyr OS) |
 
 ## Usage
-1. Add the Z_IAQ module to your manifest file
-    - With the [6tron manifest](https://github.com/catie-aq/zephyr_6tron-manifest):
-    ```bash
-        - name: 6tron-manifest
-          remote: catie-6tron
-          repo-path: zephyr_6tron-manifest
-          revision: main
-          path: 6tron/6tron-manifest
-            name-blocklist:
-              - z-iaq
-    ```
-    - Without the [6tron manifest](https://github.com/catie-aq/zephyr_6tron-manifest):
-    ```bash
-        - name: 6tron-manifest
-          remote: catie-6tron
-          repo-path: zephyr_6tron-manifest
-          revision: main
-    ```
 
-2. Compile your application for the Z_IAQ board
-```bash
-west build -b z_iaq <zephyr>/samples/hello_world
-```
-
-3. Flash your application
-```bash
-west flash
-```
+Compile and flash application using `z_iaq` board name.
