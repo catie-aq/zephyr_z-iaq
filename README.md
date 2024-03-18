@@ -1,6 +1,6 @@
 # Z_IAQ
 
-[Z_IAQ](https://6tron.io/z_object/z_iaq) custom target for Zephyr OS.
+[Z_IAQ](https://6tron.io/z_object/z_iaq_1_1_0) custom target for Zephyr OS.
 
 ## Supported Features
 
