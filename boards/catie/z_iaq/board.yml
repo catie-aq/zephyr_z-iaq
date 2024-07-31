@@ -2,4 +2,4 @@ board:
   name: z_iaq
   vendor: catie
   socs:
-    - name: nrf52832_QFAA
+    - name: nrf52832
