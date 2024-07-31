@@ -3,6 +3,9 @@
 # Copyright (c) 2023 CATIE
 # SPDX-License-Identifier: Apache-2.0
 
-config BOARD_Z_IAQ
-	bool "Z IAQ Development Board"
-	depends on SOC_NRF52832_QFAA
+if BOARD_Z_IAQ
+
+config BT_CTLR
+	default BT
+
+endif # BOARD_Z_IAQ
