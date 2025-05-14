@@ -1,0 +1,14 @@
+identifier: z_iaq
+name: Z_IAQ
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+ram: 64
+flash: 512
+supported:
+  - gpio
+  - counter
+  - i2c
+vendor: catie
