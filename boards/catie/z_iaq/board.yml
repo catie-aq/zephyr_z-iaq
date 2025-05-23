@@ -1,5 +1,6 @@
 board:
   name: z_iaq
+  full_name: Z_IAQ
   vendor: catie
   socs:
     - name: nrf52832
